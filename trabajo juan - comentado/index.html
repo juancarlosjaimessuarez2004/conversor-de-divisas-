@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Divisas</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Archivo CSS para estilos personalizados -->
+    <link rel="stylesheet" href="fondo.css"> <!-- Archivo CSS para estilos de fondo -->
+    <script src="funciones.js"></script> <!-- Archivo JavaScript para funciones personalizadas -->
+    <link rel="stylesheet" href="pantalla.css"> <!-- Archivo CSS para estilos de la pantalla -->
+</head>
+<body onclick="PlayAudio()"> <!-- Evento onclick para reproducir audio al hacer clic en el cuerpo de la página -->
+    <div class="container">
+        <div class="cubo">
+         <span></span> <!-- Elementos del cubo -->
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+        </div>
+        <div class="Loading">
+            <div>
+                <h1>Loading</h1> <!-- Título de carga -->
+                <p>. . .</p> <!-- Punto de carga animado -->
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <audio id="musica1">
+        <source src="audio/cancion.mp3"> <!-- Fuente de audio para reproducir una canción -->
+        Este navegador no admite otros formatos de reproducción.
+    </audio>
+
+    <div id="calculadora" class="oculto"> <!-- Div para la calculadora (inicialmente oculto) -->
+        <section class="form-register">
+            <header>
+                <center>
+                    <h1>Convertidor de Divisas</h1> <!-- Título de la calculadora -->
+                </center>
+            </header>
+            <main>
+                <center>
+                    <div id="convertidor">
+                        <label for="convertirDe">Convertir de</label> <!-- Etiqueta para seleccionar la divisa de origen -->
+                        <br>
+                        <select id="convertirDe">
+                            <option value="1">Peso colombiano</option>
+                            <option value="2">Dólar</option>
+                            <option value="3">Euro</option>
+                        </select>
+                        <br><br>
+                        <label for="convertirA">Convertir a</label> <!-- Etiqueta para seleccionar la divisa de destino -->
+                        <br>
+                        <select id="convertirA">
+                            <option value="1">Peso colombiano</option>
+                            <option value="2">Dólar</option>
+                            <option value="3">Euro</option>
+                        </select>
+                        <br><br>
+                        <label for="cantidad">Cantidad</label> 
+                        <input class="controls" type="number" id="cantidad"> <!-- Entrada de texto para la cantidad a convertir -->
+                        <button id="boton" onclick="convertir()">Convertir</button> <!-- Botón para realizar la conversión -->
+                        <br><br>
+                        <label for="convertidoA">Resultado</label> <!-- Etiqueta para mostrar el resultado de la conversión -->
+                        <input class="controls" type="number" id="convertidoA" readonly> <!-- Entrada de texto de solo lectura para mostrar el resultado -->
+                        <br><br>
+                    </div>
+                </center>
+            </main>
+            <br><br>
+            <center>
+                <footer>
+                    <h3>HECHO POR</h3> <!-- Título de la sección de créditos -->
+                    <h5>Claudia Noreña</h5> <!-- Créditos de los creadores -->
+                    <h5>Carlos Jaimes</h5>
+                    <h5>Juan Carlos Jaimes</h5>
+                    <h5>Nayder Zamyr</h5>
+                </footer>
+            </center>
+        </section>
+    </div>
+
+    <div class="container">
+        <div class="burbujas">
+            <span style="--i:11;"></span> <!-- Burbujas animadas -->
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:29;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:45;"></span>
+            <span style="--i:33;"></span>
+            <span style="--i:35;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:38;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:35;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:11;"></span>
+        </div>
+    </div>
+
+    <script>
+        var audioPlayed = false;
+
+        function PlayAudio() {
+            if (!audioPlayed) {
+                var audio = document.getElementById("musica1");
+                audio.play();
+                audioPlayed = true;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+/* Reinicia los márgenes, rellenos y ajusta el modelo de caja para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establece la altura del HTML y el cuerpo al 100% */
+html, body {
+    height: 100%;
+}
+
+/* Contenedor principal */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor de burbujas */
+.burbujas {
+    position: relative;
+    display: flex;
+}
+
+/* Estilo de las burbujas */
+.burbujas span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #bdd3d844,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s/var(--i));
+}
+
+/* Estilo de las burbujas pares */
+.burbujas span:nth-child(even) {
+    background-color: #ff2d2d;
+    box-shadow: 0 0 0 10px #8f2dff44,
+    0 0 50px #ff2d2d,
+    0 0 100px #ff2d2d;
+}
+
+/* Animación de las burbujas */
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+    }
+}
+
+/* Estilo del formulario de registro */
+.form-register {
+    width: 400px;
+    background: #306396;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    z-index: 1;
+    box-shadow: 0 0 10px #306396,
+                0 0 20px #306396,
+                0 0 30px #306396,
+                0 0 40px #306396,
+                0 0 50px #306396,
+                0 0 60px #306396,
+                0 0 70px #306396;
+}
+
+/* Estilo del título del formulario */
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los controles (inputs, selects, etc.) */
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+
+/* Estilo de los párrafos del formulario */
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Estilo de los enlaces del formulario */
+.form-register a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo de los enlaces del formulario al pasar el cursor sobre ellos */
+.form-register a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Reinicia los márgenes, rellenos y ajusta el modelo de caja para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establece la altura del HTML y el cuerpo al 100% */
+html, body {
+    height: 100%;
+}
+/* Estilo del contenedor principal */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Estilo de las burbujas */
+.burbujas {
+    position: relative;
+    display: flex;
+}
+
+/* Estilo de cada burbuja */
+.burbujas span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #10333b,
+    0 0 100px #19454e;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s/var(--i));
+}
+
+/* Estilo de las burbujas pares */
+.burbujas span:nth-child(even) {
+    background-color: #ff2d2d;
+    box-shadow: 0 0 0 10px #8f2dff44,
+    0 0 50px #ff2d2d,
+    0 0 100px #ff2d2d;
+}
+
+/* Animación de las burbujas */
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+    }
+}
+
+/* Estilo del formulario de registro */
+.form-register {
+    width: 400px;
+    background: #22374b;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    font-family: 'calibri';
+    color: white;
+    z-index: 1;
+    box-shadow: 0 0 10px #306396,
+                0 0 20px #306396,
+                0 0 30px #306396,
+                0 0 40px #306396,
+                0 0 50px #306396,
+                0 0 60px #306396,
+                0 0 70px #306396;
+}
+h1 {
+    color: rgb(255, 255, 255); /* Color blanco para h1 */
+}
+
+h3 {
+    color: rgb(241, 246, 245); /* Color para h3 */
+}
+
+h5 {
+    color: rgb(247, 245, 249); /* Color para h5 */
+}
+
+button {
+    color: aquamarine; /* Color aquamarine para botones */
+}
+
+select {
+    color: #24303c; /* Color #24303c para selects */
+}
+
+input.controls {
+    color: white; /* Color blanco para inputs con clase "controls" */
+}
+
+select#convertirDe,
+select#convertirA {
+    background-color: #24303c; /* Cambia el color de fondo a tu elección */
+    color: #fff; /* Color blanco para selects con id "convertirDe" y "convertirA" */
+    position: relative;
+    z-index: 1;
+}
+
+button {
+    color: rgb(246, 245, 247); /* Color para botones */
+    background-color: #222c36; /* Color de fondo para botones */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #8d248d, #ff00ff, #00ffff, #ff00ff); /* Gradiente de colores para el fondo del botón */
+    z-index: -1;
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+input.controls {
+    color: white; /* Color blanco para inputs con clase "controls" */
+    background-color: #24303c; /* Color de fondo para inputs con clase "controls" */
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input.controls:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 1);
+}
+
+select#convertirDe,
+select#convertirA,
+input.controls {
+    color: white; /* Color blanco para selects y inputs con clase "controls" */
+    background-color: #76d5d8; /* Color de fondo para selects y inputs con clase "controls" */
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+select#convertirDe:focus,
+select#convertirA:focus,
+input.controls:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 1); /* Sombra al tener en foco selects e inputs con clase "controls" */
+}
+
+.form-register h4 {
+    font-size: 22px; /* Tamaño de fuente para h4 */
+    margin-bottom: 20px; /* Margen inferior para h4 */
+}
+
+.controls {
+    width: 100%;
+    background: #24303c; /* Color de fondo para elementos con clase "controls" */
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5; /* Borde para elementos con clase "controls" */
+    font-family: 'calibri';
+    font-size: 18px; /* Tamaño de fuente para elementos con clase "controls" */
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px; /* Tamaño de fuente para párrafos dentro de ".form-register" */
+}
+
+.form-register a {
+    color: white; /* Color para enlaces dentro de ".form-register" */
+    text-decoration: none;
+}
+
+.form-register a:hover {
+    color: white;
+    text-decoration: underline; /* Subrayado al pasar el mouse sobre enlaces dentro de ".form-register" */
+}
